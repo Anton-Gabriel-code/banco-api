@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Java</title>
+ <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #f0f0f0; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; margin-top: 30px; }
+        input, select { padding: 8px; margin: 5px; width: 200px; }
+        button { padding: 8px 16px; background: #2c3e50; color: white; border: none; cursor: pointer; margin: 5px; }
+        button:hover { background: #34495e; }
+        #resultado { background: white; padding: 15px; margin-top: 20px; border-radius: 5px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>🏦 Banco do Tonho</h1>
+
+    <h2>Criar Conta</h2>
+    <input type="text" id="titular" placeholder="Nome do titular">
+    <select id="tipo">
+        <option value="CORRENTE">Corrente</option>
+        <option value="POUPANCA">Poupança</option>
+    </select>
+    <button onclick="criarConta()">Criar</button>
+
+    <h2>Listar Contas</h2>
+    <button onclick="listarContas()">Listar</button>
+
+    <h2>Depositar</h2>
+    <input type="number" id="idDeposito" placeholder="ID da conta">
+    <input type="number" id="valorDeposito" placeholder="Valor">
+    <button onclick="depositar()">Depositar</button>
+
+    <h2>Sacar</h2>
+    <input type="number" id="idSaque" placeholder="ID da conta">
+    <input type="number" id="valorSaque" placeholder="Valor">
+    <button onclick="sacar()">Sacar</button>
+
+    <h2>Transferir</h2>
+    <input type="number" id="origemId" placeholder="ID origem">
+    <input type="number" id="destinoId" placeholder="ID destino">
+    <input type="number" id="valorTransferencia" placeholder="Valor">
+    <button onclick="transferir()">Transferir</button>
+
+    <h2>Calcular Tributo</h2>
+    <input type="number" id="idTributo" placeholder="ID da conta">
+    <button onclick="calcularTributo()">Calcular</button>
+
+    <h2>Resultado</h2>
+    <div id="resultado">Nenhuma operação realizada ainda.</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
